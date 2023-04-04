@@ -1,0 +1,758 @@
+$bacground-color: #151A20;
+$text-color: #FFFFFF;
+$accent-color-main: #FFC30D;
+$accent-color-grad1: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(270deg, #8743FF 0%, #4136F1 100%);
+$accent-color-grad2: linear-gradient(239.74deg, rgba(30, 36, 44, 0.1) 0%, rgba(135, 67, 255, 0.1) 100%);
+$nav-menu-bacground: #1E242C;
+
+$heder-hight: 115px;
+
+
+
+.App {
+  min-height: 100vh;
+  background-color: $bacground-color;
+  color: $text-color;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    height: $heder-hight;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .logoPlace {
+
+      a {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .header-logo {
+          font-size: 30px;
+          color: $accent-color-main;
+        }
+
+        .header-site-name {
+          margin-left: 8px;
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 14px;
+        }
+      }
+
+    }
+
+    .loginPlace {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+
+  }
+
+  .nav-menu {
+    position: absolute;
+    width: 54px;
+    left: 0px;
+    top: $heder-hight;
+
+    background: $nav-menu-bacground;
+    box-shadow: 9px 4px 18px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 50px 50px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding-block: 40px;
+
+    a {
+      margin-block: 15px;
+
+      svg {
+        stroke: $text-color;
+      }
+
+      svg:hover {
+        stroke: $accent-color-main;
+      }
+    }
+
+
+  }
+
+  .new {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      width: 100%;
+      text-align: start;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 14px;
+    }
+
+    .new-container {
+      width: 100%;
+      margin-top: 46px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .newMovieStyle {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-end;
+        background: linear-gradient(180deg, rgba(21, 26, 32, 0) 0%, rgba(21, 26, 32, 0.99) 100%);
+
+
+        .newMovie-year {
+          width: 68px;
+          height: 19px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(270deg, #8743FF 0%, #4136F1 100%);
+          border-radius: 0px 10px 10px 0px;
+
+          font-family: 'Bebas Neue';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .newMovie-title {
+          margin-left: 3.45%;
+          margin-right: 14.34%;
+
+
+          font-family: 'Bebas Neue';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 25px;
+          line-height: 25px;
+        }
+
+        .newMovie-rating-container {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+          flex-wrap: nowrap;
+
+
+          .newMovie-rating {
+            padding-left: 3.45%;
+
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+          }
+
+          .newMovie-rating-button {
+            background: #FFC30D;
+            border-radius: 10px 0px;
+
+            padding-inline: 19px;
+            padding-block: 8px;
+
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
+
+
+      }
+
+      .main-left-container {
+        width: 50%;
+        height: 618px;
+
+        .newMovie-container-1 {
+          height: 100%;
+          width: 100%;
+          border-radius: 10px;
+
+          .newMovie-year {
+            width: 169px;
+            height: 37px;
+            font-size: 24px;
+          }
+
+          .newMovie-title {
+            font-size: 48px;
+            line-height: 48px;
+          }
+
+          .newMovie-shortDescription {
+            margin-left: 3.45%;
+            margin-right: 14.34%;
+
+            text-align: start;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+          }
+
+          .newMovie-rating-container {
+
+            .newMovie-rating {
+              font-size: 24px;
+              line-height: 24px;
+            }
+
+            .newMovie-rating-button {
+              font-size: 36px;
+              line-height: 36px;
+              padding-inline: 37px;
+              padding-block: 16px;
+            }
+          }
+        }
+      }
+
+      .additional-right-container {
+        width: calc(50% - 20px);
+        margin-left: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .newMovie-container-2 {
+          height: 50%;
+          width: calc(50% - 10px);
+          margin-right: 20px;
+          border-radius: 10px;
+
+        }
+
+        .newMovie-container-3 {
+          height: 50%;
+          width: calc(50% - 10px);
+          border-radius: 10px;
+        }
+
+        .newMovie-container-4 {
+          height: calc(50% - 20px);
+          width: 100%;
+          margin-top: 20px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: row;
+          align-items: end;
+          justify-content: space-between;
+
+          .newMovie-title {
+            padding-left: 3.45%;
+
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 48px;
+          }
+
+          .newMovie-rating-button {
+            padding-inline: 38px;
+            padding-block: 16px;
+            background: #FFC30D;
+            border-radius: 10px 0px;
+
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 21px;
+          }
+        }
+
+      }
+
+
+
+
+    }
+  }
+
+  .moviesOnly {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 135px;
+    margin-bottom: 30px;
+
+    .movies-only-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        width: 100%;
+        text-align: start;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 14px;
+      }
+
+      .slider-inner {
+        overflow: hidden;
+        margin-top: 18px;
+
+        .slides {
+          display: flex;
+          margin-top: 30px;
+          overflow: hidden;
+          animation-name: fade;
+          animation-duration: 30s;
+          animation-iteration-count: infinite;
+
+          img {
+            cursor: pointer;
+            margin-inline: 15px;
+
+            width: 155px;
+            flex-shrink: 0;
+
+
+          }
+
+
+        }
+      }
+
+
+      .slides:hover {
+        animation-play-state: paused;
+      }
+
+
+
+
+      @keyframes fade {
+        0% {
+          transform: translate(0);
+
+        }
+
+        25% {
+          transform: translateX(-25%);
+        }
+
+        // 50% {
+        //   transform: translateX(-50%);
+        // }
+
+        // 75% {
+        //   transform: translateX(-25%);
+        // }
+
+        // 100% {
+        //   transform: translateX(0);
+        // }
+      }
+    }
+
+
+  }
+
+  .serialsOnly {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 135px;
+    margin-bottom: 30px;
+
+    .serials-only-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        width: 100%;
+        text-align: start;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 14px;
+      }
+
+      .slider-inner {
+        overflow: hidden;
+        margin-top: 18px;
+
+        .slides {
+          display: flex;
+          margin-top: 30px;
+          overflow: hidden;
+          animation-name: fade;
+          animation-duration: 30s;
+          animation-iteration-count: infinite;
+
+          img {
+            cursor: pointer;
+            margin-inline: 15px;
+
+            width: 155px;
+            flex-shrink: 0;
+
+
+          }
+
+
+        }
+      }
+
+
+      .slides:hover {
+        animation-play-state: paused;
+      }
+
+
+
+
+      @keyframes fade {
+        0% {
+          transform: translate(0);
+
+        }
+
+        25% {
+          transform: translateX(-25%);
+        }
+
+        // 50% {
+        //   transform: translateX(-50%);
+        // }
+
+        // 75% {
+        //   transform: translateX(-25%);
+        // }
+
+        // 100% {
+        //   transform: translateX(0);
+        // }
+      }
+    }
+
+
+  }
+
+  .cartoonsOnly {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 135px;
+    margin-bottom: 30px;
+
+    .cartoons-only-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        width: 100%;
+        text-align: start;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 14px;
+      }
+
+      .slider-inner {
+        overflow: hidden;
+        margin-top: 18px;
+
+        .slides {
+          display: flex;
+          margin-top: 30px;
+          overflow: hidden;
+          animation-name: fade;
+          animation-duration: 30s;
+          animation-iteration-count: infinite;
+
+          img {
+            cursor: pointer;
+            margin-inline: 15px;
+
+            width: 155px;
+            flex-shrink: 0;
+
+
+          }
+
+
+        }
+      }
+
+
+      .slides:hover {
+        animation-play-state: paused;
+      }
+
+
+
+
+      @keyframes fade {
+        0% {
+          transform: translate(0);
+
+        }
+
+        25% {
+          transform: translateX(-25%);
+        }
+
+        // 50% {
+        //   transform: translateX(-50%);
+        // }
+
+        // 75% {
+        //   transform: translateX(-25%);
+        // }
+
+        // 100% {
+        //   transform: translateX(0);
+        // }
+      }
+    }
+
+
+  }
+
+  .animeOnly {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 135px;
+    margin-bottom: 30px;
+
+    .anime-only-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        width: 100%;
+        text-align: start;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 14px;
+      }
+
+      .slider-inner {
+        overflow: hidden;
+        margin-top: 18px;
+
+        .slides {
+          display: flex;
+          margin-top: 30px;
+          overflow: hidden;
+          animation-name: fade;
+          animation-duration: 30s;
+          animation-iteration-count: infinite;
+
+          img {
+            cursor: pointer;
+            margin-inline: 15px;
+
+            width: 155px;
+            flex-shrink: 0;
+
+
+          }
+
+
+        }
+      }
+
+
+      .slides:hover {
+        animation-play-state: paused;
+      }
+
+
+
+
+      @keyframes fade {
+        0% {
+          transform: translate(0);
+
+        }
+
+        25% {
+          transform: translateX(-25%);
+        }
+
+        // 50% {
+        //   transform: translateX(-50%);
+        // }
+
+        // 75% {
+        //   transform: translateX(-25%);
+        // }
+
+        // 100% {
+        //   transform: translateX(0);
+        // }
+      }
+    }
+
+
+  }
+
+  footer {
+    height: calc($heder-hight + 10px);
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: $nav-menu-bacground;
+    margin-top: 50px;
+
+    .logoPlace {
+
+      a {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .footer-logo {
+          font-size: 30px;
+          color: $accent-color-main;
+        }
+
+        .footer-site-name {
+          margin-left: 8px;
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 14px;
+        }
+      }
+
+    }
+
+    .copirightPlace {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+
+      span {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 14px;
+        /* identical to box height, or 100% */
+
+        display: flex;
+        align-items: center;
+
+        color: #8E8E8E;
+      }
+    }
+
+    .linksPlace {
+      display: flex;
+
+      span {
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 14px;
+        /* identical to box height, or 78% */
+
+        margin-right: 30px;
+
+        display: flex;
+        align-items: center;
+      }
+    }
+
+
+  }
+
+}
+
+//Стили для всех
+
+.column {
+  padding-inline: 135px;
+}
+
+.first-block {
+  margin-top: calc(($heder-hight*2) - 11px);
+  margin-bottom: 15px;
+}
+
+/* unvisited link */
+a:link {
+  color: $text-color;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: $text-color;
+}
+
+/* mouse over link */
+a:hover {
+  color: $accent-color-main;
+}
+
+/* selected link */
+a:active {
+  color: $accent-color-main;
+}
