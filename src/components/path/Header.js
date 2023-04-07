@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 class Header extends React.Component {
@@ -6,10 +7,10 @@ class Header extends React.Component {
         return (
             <header className="column">
                 <div className="logoPlace">
-                    <a href="#">
+                    <Link to="/">
                         <div className="header-logo">  <i className="fa-brands fa-fort-awesome"></i></div>
                         <span className="header-site-name">My Cinema</span>
-                    </a>
+                    </Link>
 
                 </div>
                 <div className="loginPlace">
