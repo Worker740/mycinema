@@ -650,8 +650,8 @@ class New extends React.Component {
                                         backgroundPosition: "top center",
                                         backgroundSize: "cover"
                                     }}>
-                                        <div className="newMovie-title">{obj.id}</div>
-                                        <Link to={`/movies/${obj.name}`}>
+                                        <div className="newMovie-title">{obj.name}</div>
+                                        <Link to={`/movies/${obj.id}`}>
                                             <div className="newMovie-rating-button button">Смотреть</div>
                                         </Link>
                                     </div>
