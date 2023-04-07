@@ -178,7 +178,7 @@ $heder-hight: 115px;
             }
 
             .newMovie-rating-button {
-              background: #FFC30D;
+              background: $accent-color-main;
               border-radius: 10px 0px;
 
               padding-inline: 19px;
@@ -344,8 +344,109 @@ $heder-hight: 115px;
 
   }
 
-  .moviesPage{
-    
+  .moviesPage {
+    width: 100%;
+
+    h1 {
+      
+      font-style: normal;
+      font-weight: 600;
+      font-size: 50px;
+      outline: none;
+    }
+
+    .filterContainer {
+      width: 100%;
+      margin-block: 30px;
+      padding: 30px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+
+      input {
+        border-radius: 10px;
+        border: 1px solid $accent-color-main;
+        padding: 10px;
+        background-color: $bacground-color;
+        color: $text-color;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        outline: none;
+      }
+
+      .inputOfSearch {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .filterButton {
+        width: 30%;
+        background: $accent-color-main;
+        border-radius: 10px 0px;
+
+        padding-inline: 30px;
+        padding-block: 20px;
+
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 14px;
+      }
+
+      .filterButton:hover {
+        color: $nav-menu-bacground;
+      }
+    }
+
+    .moviesListContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .movieCardContainer {
+        width: 280px;
+        height: 500px;
+        margin: 5px;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+
+        a {
+          margin: 5px;
+
+          img {
+
+            border-radius: 10px;
+            height: 400px;
+            width: 250px;
+            flex-shrink: 0;
+            object-fit: cover;
+          }
+        }
+
+        h2 {
+          width: 100%;
+          text-align: center;
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          // line-height: 14px;
+        }
+      }
+    }
   }
 
   .movieSample {
@@ -464,7 +565,7 @@ $heder-hight: 115px;
       margin-bottom: 10px;
     }
 
-    a{
+    a {
       width: 100%;
       padding: 30px;
     }

@@ -591,7 +591,7 @@ class New extends React.Component {
 
 
     render() {
-        console.log(this.state.arrOfNewMovies);
+        // console.log(this.state.arrOfNewMovies);
         return (
             <div className="new column first-block">
                 <h2>Новинки</h2>
@@ -636,7 +636,7 @@ class New extends React.Component {
                                         <div className="newMovie-rating-container">
                                             <div className="newMovie-rating">KP: {obj.rating.kp}</div>
                                             <div className="newMovie-rating">IMDB: {obj.rating.imdb}</div>
-                                            <Link to={`/movies/${obj.name}`} data={obj}>
+                                            <Link to={`/movies/${obj.id}`} data={obj}>
                                                 <div className="newMovie-rating-button button">Смотреть</div>
                                             </Link>
                                         </div>
@@ -650,7 +650,7 @@ class New extends React.Component {
                                         backgroundPosition: "top center",
                                         backgroundSize: "cover"
                                     }}>
-                                        <div className="newMovie-title">{obj.name}</div>
+                                        <div className="newMovie-title">{obj.id}</div>
                                         <Link to={`/movies/${obj.name}`}>
                                             <div className="newMovie-rating-button button">Смотреть</div>
                                         </Link>

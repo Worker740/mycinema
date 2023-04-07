@@ -9,7 +9,7 @@ import axios from "axios";
 const MovieSample = () => {
     const params = useParams()
     let movieId = params.id
-    console.log(movieId);
+    // console.log(movieId);
     let singleMovieData = {
         "externalId": {
             "kpHD": "47649cf90de74aca8da7eb5b17fc8a8a",
@@ -157,7 +157,7 @@ const MovieSample = () => {
     }
     // {if (singleMovieData.alternativeName) singleMovieData.alternativeName}
     //await importMovies()
-    console.log(singleMovieData);
+    // console.log(singleMovieData);
 
     return (
         <div className="movieSample column" style={{
@@ -174,6 +174,7 @@ const MovieSample = () => {
                     <div>KP: <span>{singleMovieData.rating.kp}</span></div>
                     <div>IMDB: <span>{singleMovieData.rating.imdb}</span></div>
                     <div>Время: <span>{singleMovieData.movieLength} м</span></div>
+                    <div>ID Кинопоиска: <span>{movieId}</span></div>
                 </div>
             </div>
 

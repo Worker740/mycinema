@@ -4825,6 +4825,8 @@ class MoviesOnly extends React.Component {
             arrows: false,
             accessibility: false,
             adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: '3000',
             afterChange: function (index) {
                 // console.log(
                 //     `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
