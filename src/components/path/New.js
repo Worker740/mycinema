@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import apiKinopoisk from "./API";
+import { Link } from "react-router-dom";
 
 
 class New extends React.Component {
@@ -576,16 +577,13 @@ class New extends React.Component {
     }
 
     importMovies = async () => {
-
         let headers = {
             headers: {
                 'Content-Type': 'application/json',
                 'X-API-KEY': apiKinopoisk,
             }
         }
-
         const response = await axios.get('https://api.kinopoisk.dev/v1/movie?limit=4&top250=%21null', headers);
-
         // console.log('Function response:', response.data.docs);
         this.setState({ arrOfNewMovies: response.data.docs })
         // console.log(this.state.arrOfNewMovies);
@@ -593,7 +591,7 @@ class New extends React.Component {
 
 
     render() {
-        // console.log(this.state.arrOfNewMovies);
+        console.log(this.state.arrOfNewMovies);
         return (
             <div className="new column first-block">
                 <h2>Новинки</h2>
@@ -613,7 +611,10 @@ class New extends React.Component {
                                         <div className="newMovie-rating-container">
                                             <div className="newMovie-rating">KP: {obj.rating.kp}</div>
                                             <div className="newMovie-rating">IMDB: {obj.rating.imdb}</div>
-                                            <div className="newMovie-rating-button">Смотреть</div>
+                                            <Link to={`/movies/${obj.id}`}>
+                                                <div className="newMovie-rating-button button">Смотреть</div>
+                                            </Link>
+
                                         </div>
                                     </div>
                                 )
@@ -635,7 +636,9 @@ class New extends React.Component {
                                         <div className="newMovie-rating-container">
                                             <div className="newMovie-rating">KP: {obj.rating.kp}</div>
                                             <div className="newMovie-rating">IMDB: {obj.rating.imdb}</div>
-                                            <div className="newMovie-rating-button">Смотреть</div>
+                                            <Link to={`/movies/${obj.name}`} data={obj}>
+                                                <div className="newMovie-rating-button button">Смотреть</div>
+                                            </Link>
                                         </div>
 
                                     </div>
@@ -648,7 +651,9 @@ class New extends React.Component {
                                         backgroundSize: "cover"
                                     }}>
                                         <div className="newMovie-title">{obj.name}</div>
-                                        <div className="newMovie-rating-button">Смотреть</div>
+                                        <Link to={`/movies/${obj.name}`}>
+                                            <div className="newMovie-rating-button button">Смотреть</div>
+                                        </Link>
                                     </div>
                                 )
                             }

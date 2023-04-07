@@ -98,551 +98,352 @@ $heder-hight: 115px;
 
   }
 
-  .new {
-    display: flex;
-    flex-direction: column;
-
-    h2 {
-      width: 100%;
-      text-align: start;
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 30px;
-      line-height: 14px;
-    }
-
-    .new-container {
-      width: 100%;
-      margin-top: 46px;
+  .mainPage {
+    .new {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-direction: column;
 
-      .newMovieStyle {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: flex-end;
-        background: linear-gradient(180deg, rgba(21, 26, 32, 0) 0%, rgba(21, 26, 32, 0.99) 100%);
-
-
-        .newMovie-year {
-          width: 68px;
-          height: 19px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(270deg, #8743FF 0%, #4136F1 100%);
-          border-radius: 0px 10px 10px 0px;
-
-          font-family: 'Bebas Neue';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-        }
-
-        .newMovie-title {
-          margin-left: 3.45%;
-          margin-right: 14.34%;
-
-
-          font-family: 'Bebas Neue';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 25px;
-          line-height: 25px;
-        }
-
-        .newMovie-rating-container {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-direction: row;
-          flex-wrap: nowrap;
-
-
-          .newMovie-rating {
-            padding-left: 3.45%;
-
-            font-family: 'Bebas Neue';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 20px;
-            display: flex;
-            align-items: center;
-          }
-
-          .newMovie-rating-button {
-            background: #FFC30D;
-            border-radius: 10px 0px;
-
-            padding-inline: 19px;
-            padding-block: 8px;
-
-            font-family: 'Bebas Neue';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 14px;
-          }
-        }
-
-
+      h2 {
+        width: 100%;
+        text-align: start;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 14px;
       }
 
-      .main-left-container {
-        width: 50%;
-        height: 618px;
-
-        .newMovie-container-1 {
-          height: 100%;
-          width: 100%;
-          border-radius: 10px;
-
-          .newMovie-year {
-            width: 169px;
-            height: 37px;
-            font-size: 24px;
-          }
-
-          .newMovie-title {
-            font-size: 48px;
-            line-height: 48px;
-          }
-
-          .newMovie-shortDescription {
-            margin-left: 3.45%;
-            margin-right: 14.34%;
-
-            text-align: start;
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 21px;
-          }
-
-          .newMovie-rating-container {
-
-            .newMovie-rating {
-              font-size: 24px;
-              line-height: 24px;
-            }
-
-            .newMovie-rating-button {
-              font-size: 36px;
-              line-height: 36px;
-              padding-inline: 37px;
-              padding-block: 16px;
-            }
-          }
-        }
-      }
-
-      .additional-right-container {
-        width: calc(50% - 20px);
-        margin-left: 20px;
+      .new-container {
+        width: 100%;
+        margin-top: 46px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
 
-        .newMovie-container-2 {
-          height: 50%;
-          width: calc(50% - 10px);
-          margin-right: 20px;
-          border-radius: 10px;
-
-        }
-
-        .newMovie-container-3 {
-          height: 50%;
-          width: calc(50% - 10px);
-          border-radius: 10px;
-        }
-
-        .newMovie-container-4 {
-          height: calc(50% - 20px);
-          width: 100%;
-          margin-top: 20px;
-          border-radius: 10px;
+        .newMovieStyle {
           display: flex;
-          flex-direction: row;
-          align-items: end;
-          justify-content: space-between;
+          flex-direction: column;
+          align-items: start;
+          justify-content: flex-end;
+          background: linear-gradient(180deg, rgba(21, 26, 32, 0) 0%, rgba(21, 26, 32, 0.99) 100%);
+
+
+          .newMovie-year {
+            width: 68px;
+            height: 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(270deg, #8743FF 0%, #4136F1 100%);
+            border-radius: 0px 10px 10px 0px;
+
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+          }
 
           .newMovie-title {
-            padding-left: 3.45%;
+            margin-left: 3.45%;
+            margin-right: 14.34%;
+
 
             font-family: 'Bebas Neue';
             font-style: normal;
             font-weight: 400;
-            font-size: 48px;
-            line-height: 48px;
+            font-size: 25px;
+            line-height: 25px;
           }
 
-          .newMovie-rating-button {
-            padding-inline: 38px;
-            padding-block: 16px;
-            background: #FFC30D;
-            border-radius: 10px 0px;
+          .newMovie-rating-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
 
-            font-family: 'Bebas Neue';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 21px;
-            line-height: 21px;
+
+            .newMovie-rating {
+              padding-left: 3.45%;
+
+              font-family: 'Bebas Neue';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 20px;
+              display: flex;
+              align-items: center;
+            }
+
+            .newMovie-rating-button {
+              background: #FFC30D;
+              border-radius: 10px 0px;
+
+              padding-inline: 19px;
+              padding-block: 8px;
+
+              font-family: 'Bebas Neue';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 14px;
+            }
+          }
+
+
+        }
+
+        .main-left-container {
+          width: 50%;
+          height: 618px;
+
+          .newMovie-container-1 {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+
+            .newMovie-year {
+              width: 169px;
+              height: 37px;
+              font-size: 24px;
+            }
+
+            .newMovie-title {
+              font-size: 48px;
+              line-height: 48px;
+            }
+
+            .newMovie-shortDescription {
+              margin-left: 3.45%;
+              margin-right: 14.34%;
+
+              text-align: start;
+              font-family: 'Poppins';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 21px;
+            }
+
+            .newMovie-rating-container {
+
+              .newMovie-rating {
+                font-size: 24px;
+                line-height: 24px;
+              }
+
+              .newMovie-rating-button {
+                font-size: 36px;
+                line-height: 36px;
+                padding-inline: 37px;
+                padding-block: 16px;
+              }
+            }
           }
         }
 
+        .additional-right-container {
+          width: calc(50% - 20px);
+          margin-left: 20px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+
+          .newMovie-container-2 {
+            height: 50%;
+            width: calc(50% - 10px);
+            margin-right: 20px;
+            border-radius: 10px;
+
+          }
+
+          .newMovie-container-3 {
+            height: 50%;
+            width: calc(50% - 10px);
+            border-radius: 10px;
+          }
+
+          .newMovie-container-4 {
+            height: calc(50% - 20px);
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: space-between;
+
+            .newMovie-title {
+              padding-left: 3.45%;
+
+              font-family: 'Bebas Neue';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 48px;
+              line-height: 48px;
+            }
+
+            .newMovie-rating-button {
+              padding-inline: 38px;
+              padding-block: 16px;
+              background: #FFC30D;
+              border-radius: 10px 0px;
+
+              font-family: 'Bebas Neue';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 21px;
+              line-height: 21px;
+            }
+          }
+
+        }
+
+
+
+
       }
 
-
-
-
+      a:hover {
+        color: $nav-menu-bacground;
+      }
     }
-  }
 
-  .moviesOnly {
-    width: 100%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    padding-left: 135px;
-    margin-bottom: 30px;
-
-    .movies-only-container {
+    .moviesOnly {
       width: 100%;
       display: flex;
+      align-items: start;
       flex-direction: column;
+      padding-left: 135px;
 
-      h2 {
+      margin-bottom: 30px;
+
+
+      .movies-only-container {
         width: 100%;
+        margin-top: 18px;
+
+        .center {
+          margin-top: 30px;
+
+          a {
+
+            img {
+              height: auto;
+              width: 280px;
+              flex-shrink: 0;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+
+  .movieSample {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+
+    .movieSampleLeft {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: end;
+
+      padding-bottom: 150px;
+
+      .movieType {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 30px;
+
+        h3 {
+          margin-right: 30px;
+
+          font-family: 'Bebas Neue';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 48px;
+          line-height: 65px;
+        }
+      }
+
+      h1 {
+        text-align: start;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 65px;
+        padding-bottom: 30px;
+      }
+
+      .movieDescription {
         text-align: start;
         font-family: 'Poppins';
         font-style: normal;
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 14px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        padding-bottom: 30px;
       }
 
-      .slider-inner {
-        overflow: hidden;
-        margin-top: 18px;
+      .movieRatingContainer {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 30px;
 
-        .slides {
-          display: flex;
-          margin-top: 30px;
-          overflow: hidden;
-          animation-name: fade;
-          animation-duration: 30s;
-          animation-iteration-count: infinite;
+        div {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 24px;
 
-          img {
-            cursor: pointer;
-            margin-inline: 15px;
+          margin-right: 20px;
 
-            width: 155px;
-            flex-shrink: 0;
-
-
+          span {
+            color: $accent-color-main;
           }
-
-
         }
+
       }
 
 
-      .slides:hover {
-        animation-play-state: paused;
-      }
-
-
-
-
-      @keyframes fade {
-        0% {
-          transform: translate(0);
-
-        }
-
-        25% {
-          transform: translateX(-25%);
-        }
-
-        // 50% {
-        //   transform: translateX(-50%);
-        // }
-
-        // 75% {
-        //   transform: translateX(-25%);
-        // }
-
-        // 100% {
-        //   transform: translateX(0);
-        // }
-      }
     }
 
-
-  }
-
-  .serialsOnly {
-    width: 100%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    padding-left: 135px;
-    margin-bottom: 30px;
-
-    .serials-only-container {
-      width: 100%;
+    .movieSampleRight {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: right;
+      width: 50%;
+      padding-bottom: 150px;
 
-      h2 {
-        width: 100%;
-        text-align: start;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 14px;
-      }
+      img {
+        width: 255px;
+        height: auto;
+        border-radius: 30px;
 
-      .slider-inner {
-        overflow: hidden;
-        margin-top: 18px;
-
-        .slides {
-          display: flex;
-          margin-top: 30px;
-          overflow: hidden;
-          animation-name: fade;
-          animation-duration: 30s;
-          animation-iteration-count: infinite;
-
-          img {
-            cursor: pointer;
-            margin-inline: 15px;
-
-            width: 155px;
-            flex-shrink: 0;
-
-
-          }
-
-
-        }
-      }
-
-
-      .slides:hover {
-        animation-play-state: paused;
-      }
-
-
-
-
-      @keyframes fade {
-        0% {
-          transform: translate(0);
-
-        }
-
-        25% {
-          transform: translateX(-25%);
-        }
-
-        // 50% {
-        //   transform: translateX(-50%);
-        // }
-
-        // 75% {
-        //   transform: translateX(-25%);
-        // }
-
-        // 100% {
-        //   transform: translateX(0);
-        // }
       }
     }
-
-
   }
 
-  .cartoonsOnly {
-    width: 100%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    padding-left: 135px;
-    margin-bottom: 30px;
 
-    .cartoons-only-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-
-      h2 {
-        width: 100%;
-        text-align: start;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 14px;
-      }
-
-      .slider-inner {
-        overflow: hidden;
-        margin-top: 18px;
-
-        .slides {
-          display: flex;
-          margin-top: 30px;
-          overflow: hidden;
-          animation-name: fade;
-          animation-duration: 30s;
-          animation-iteration-count: infinite;
-
-          img {
-            cursor: pointer;
-            margin-inline: 15px;
-
-            width: 155px;
-            flex-shrink: 0;
-
-
-          }
-
-
-        }
-      }
-
-
-      .slides:hover {
-        animation-play-state: paused;
-      }
-
-
-
-
-      @keyframes fade {
-        0% {
-          transform: translate(0);
-
-        }
-
-        25% {
-          transform: translateX(-25%);
-        }
-
-        // 50% {
-        //   transform: translateX(-50%);
-        // }
-
-        // 75% {
-        //   transform: translateX(-25%);
-        // }
-
-        // 100% {
-        //   transform: translateX(0);
-        // }
-      }
-    }
-
-
-  }
-
-  .animeOnly {
-    width: 100%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    padding-left: 135px;
-    margin-bottom: 30px;
-
-    .anime-only-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-
-      h2 {
-        width: 100%;
-        text-align: start;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 14px;
-      }
-
-      .slider-inner {
-        overflow: hidden;
-        margin-top: 18px;
-
-        .slides {
-          display: flex;
-          margin-top: 30px;
-          overflow: hidden;
-          animation-name: fade;
-          animation-duration: 30s;
-          animation-iteration-count: infinite;
-
-          img {
-            cursor: pointer;
-            margin-inline: 15px;
-
-            width: 155px;
-            flex-shrink: 0;
-
-
-          }
-
-
-        }
-      }
-
-
-      .slides:hover {
-        animation-play-state: paused;
-      }
-
-
-
-
-      @keyframes fade {
-        0% {
-          transform: translate(0);
-
-        }
-
-        25% {
-          transform: translateX(-25%);
-        }
-
-        // 50% {
-        //   transform: translateX(-50%);
-        // }
-
-        // 75% {
-        //   transform: translateX(-25%);
-        // }
-
-        // 100% {
-        //   transform: translateX(0);
-        // }
-      }
-    }
-
-
-  }
 
   footer {
+
     height: calc($heder-hight + 10px);
     width: 100%;
     font-family: 'Poppins', sans-serif;
@@ -733,13 +534,18 @@ $heder-hight: 115px;
 
 .first-block {
   margin-top: calc(($heder-hight*2) - 11px);
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.button {
+  cursor: pointer;
 }
 
 /* unvisited link */
 a:link {
   color: $text-color;
   text-decoration: none;
+  outline: none;
 }
 
 /* visited link */

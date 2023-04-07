@@ -13,7 +13,7 @@ class Footer extends React.Component {
 
                 </div>
                 <div className="copirightPlace">
-                    <span>© 2022, Tvimo, может содержать информацию, не предназначенную для несовершеннолетних</span>
+                    <span>© 2022, MyCinema, может содержать информацию, не предназначенную для несовершеннолетних</span>
                 </div>
                 <div className="linksPlace">
                     <a href="#"><span className="footer-links-name">Задать вопрос</span></a>
