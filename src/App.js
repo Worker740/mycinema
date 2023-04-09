@@ -12,6 +12,7 @@ import NotFound from './components/NotFound';
 
 import Footer from './components/path/Footer';
 import MovieSample from './components/MovieSample';
+import FavoritesPage from './components/FavoritesPage';
 
 
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
           <Route path="/" element={<MainPage />} />
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/movies/:id" element={<MovieSample />} />
+          <Route path='/favorites' element={<FavoritesPage/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

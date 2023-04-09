@@ -86,12 +86,20 @@ $heder-hight: 115px;
     a {
       margin-block: 15px;
 
-      svg {
+      .moviesLogo {
         stroke: $text-color;
       }
 
-      svg:hover {
+      .moviesLogo:hover {
         stroke: $accent-color-main;
+      }
+
+      .favoritesLogo {
+        fill: $text-color;
+      }
+
+      .favoritesLogo:hover {
+        fill: $accent-color-main;
       }
     }
 
@@ -348,7 +356,7 @@ $heder-hight: 115px;
     width: 100%;
 
     h1 {
-      
+
       font-style: normal;
       font-weight: 600;
       font-size: 50px;
@@ -365,8 +373,9 @@ $heder-hight: 115px;
       align-items: center;
       justify-content: center;
 
-
-      input {
+      .inputOfSearch {
+        width: 100%;
+        margin-bottom: 30px;
         border-radius: 10px;
         border: 1px solid $accent-color-main;
         padding: 10px;
@@ -380,10 +389,82 @@ $heder-hight: 115px;
         outline: none;
       }
 
-      .inputOfSearch {
+      .switchesContainer {
         width: 100%;
-        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .movieTypeContainer {
+          width: 50%;
+          margin-bottom: 30px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          /* для элемента input c type="radio" */
+          .custom-radio>input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+          }
+
+          /* для элемента label связанного с .custom-radio */
+          .custom-radio>span {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            font-size: 15px;
+          }
+
+          /* создание в label псевдоэлемента  before со следующими стилями */
+          .custom-radio>span::before {
+            content: '';
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 1px solid $accent-color-main;
+            border-radius: 50%;
+            margin-right: 0.5em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+          }
+
+          /* стили при наведении курсора на радио */
+          // .custom-radio>input:not(:disabled):not(:checked)+span:hover::before {
+          //   border-color: $text-color;
+          // }
+
+          /* стили для активной радиокнопки (при нажатии на неё) */
+          .custom-radio>input:not(:disabled):active+span::before {
+            background-color: $nav-menu-bacground;
+            border-color: $accent-color-main;
+          }
+
+          /* стили для радиокнопки, находящейся в фокусе */
+          .custom-radio>input:focus+span::before {
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          }
+
+          /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+          .custom-radio>input:focus:not(:checked)+span::before {
+            border-color: $accent-color-main;
+          }
+
+          /* стили для радиокнопки, находящейся в состоянии checked */
+          .custom-radio>input:checked+span::before {
+            border-color: $accent-color-main;
+            background-color: $accent-color-main;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+          }
+        }
       }
+
+
 
       .filterButton {
         width: 30%;
@@ -526,6 +607,29 @@ $heder-hight: 115px;
 
       }
 
+      .userFavorites {
+        width: 50%;
+        background: $accent-color-main;
+        border-radius: 10px 0px;
+
+        padding-inline: 20px;
+        padding-block: 20px;
+
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 14px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .userFavorites:hover {
+        color: $nav-menu-bacground;
+      }
+
 
     }
 
@@ -541,6 +645,22 @@ $heder-hight: 115px;
         height: auto;
         border-radius: 30px;
 
+      }
+    }
+
+    .moviePlayerContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+
+      .moviePlayer {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
       }
     }
   }
@@ -578,6 +698,55 @@ $heder-hight: 115px;
       font-size: 25px;
       line-height: 14px;
       margin-bottom: 10px;
+    }
+  }
+
+  .favoritesPage {
+
+    h1 {}
+
+    .favoritesContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .movieCardContainer {
+        width: 280px;
+        height: 500px;
+        margin: 5px;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+
+        a {
+          margin: 5px;
+
+          img {
+
+            border-radius: 10px;
+            height: 400px;
+            width: 250px;
+            flex-shrink: 0;
+            object-fit: cover;
+          }
+        }
+
+        h2 {
+          width: 100%;
+          text-align: center;
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          // line-height: 14px;
+        }
+      }
+
     }
   }
 

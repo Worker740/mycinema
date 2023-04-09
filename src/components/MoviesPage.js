@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import apiKinopoisk from "./path/API";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 class MoviesPage extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             arrOfMovieList: [
                 {
@@ -4787,31 +4787,70 @@ class MoviesPage extends React.Component {
                     }
                 }
             ],
+            movieType: '',
+
         }
+        this.changeInputChecked = this.changeInputChecked.bind(this);
     }
 
-    urlOfResponse = 'https://api.kinopoisk.dev/v1/movie?page=2&limit=40&type=movie'
+    // urlOfResponse = 'https://api.kinopoisk.dev/v1/movie?page=2&limit=40&type=movie'
 
-    importMovies = async (urlOfResponse) => {
 
-        let headers = {
-            headers: {
-                'Content-Type': 'application/json',
-                'X-API-KEY': apiKinopoisk,
-            }
-        }
-
-        const response = await axios.get(urlOfResponse, headers);
-        console.log('Function response:', response.data.docs);
-        this.setState({ arrOfMovieList: response.data.docs })
-        console.log(this.state.arrOfMovieList);
+    changeInputChecked(event) {
+        console.log(event.target.value);
+        this.setState({ movieType: event.target.value })
     }
 
     filterOfMovies = () => {
+        try {
+            console.log(this.state.movieType);
+            const inputOfSearch = document.querySelector('.inputOfSearch')
+            const movieTypeContainer = document.querySelector('.movieTypeContainer')
+            let name = ''
+            let type = ''
+            const urlOfFilter = 'https://api.kinopoisk.dev/v1/movie?page=1&limit=10'
+            let urlFilterResponse = ''
+
+            if (inputOfSearch.value !== '') {name = '&name=' + encodeURI(inputOfSearch.value)}
+            if (this.state.movieType !== '') {type = '&type=' + this.state.movieType} 
+            else {
+                inputOfSearch.placeholder = 'ВЫ НИЧЕГО НЕ ВВЕЛИ!'
+                setTimeout(() => { inputOfSearch.placeholder = 'Введите название фильма...' }, 3000)
+            }
 
 
+            if (name !== '' || type !== '') {
+                urlFilterResponse = urlOfFilter + name + type
+                console.log(urlFilterResponse);
+                this.importMovies(urlFilterResponse)
+            }
+
+            inputOfSearch.value = ''
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    importMovies = async (url) => {
+        try {
+            let headers = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-API-KEY': apiKinopoisk,
+                }
+            }
+
+            const response = await axios.get(url, headers);
+            console.log('Function response:', response.data.docs);
+            this.setState({ arrOfMovieList: response.data.docs })
+            console.log(this.state.arrOfMovieList);
+        } catch (error) {
+            console.log(error);
+        }
 
     }
+
+
 
 
 
@@ -4820,19 +4859,63 @@ class MoviesPage extends React.Component {
             <div className="moviesPage first-block column">
                 <h1>Смотреть фильмы онлайн на MyCinema</h1>
                 <div className="filterContainer">
-                    <input className="inputOfSearch" type="text" placeholder="Введите название фильма..."/>
+                    <input className="inputOfSearch" type="text" placeholder="Введите название фильма..." />
+                    <div className="switchesContainer">
+                        <div className="movieTypeContainer" onChange={this.changeInputChecked}>
+                            <div className="radio">
+                                <label className="custom-radio">
+                                    <input type="radio" name="movies" value="movie" />
+                                    <span>Фильмы</span>
+                                </label>
+                            </div>
 
-                    <div className="filterButton button">Найти</div>
+                            <div className="radio">
+                                <label className="custom-radio">
+                                    <input type="radio" name="movies" value="tv-series" />
+                                    <span>Сериалы</span>
+                                </label>
+                            </div>
+
+                            <div className="radio">
+                                <label className="custom-radio">
+                                    <input type="radio" name="movies" value="cartoon " />
+                                    <span>Мультфильмы</span>
+                                </label>
+                            </div>
+
+                            <div className="radio">
+                                <label className="custom-radio">
+                                    <input type="radio" name="movies" value="anime" />
+                                    <span>Аниме</span>
+                                </label>
+                            </div>
+
+                            <div className="radio">
+                                <label className="custom-radio">
+                                    <input type="radio" name="movies" value="animated-series" />
+                                    <span>Мультсериалы</span>
+                                </label>
+                            </div>
+                            <div className="radio">
+                                <label className="custom-radio">
+                                    <input type="radio" name="movies" value="tv-show" />
+                                    <span>ТВ Шоу</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="filterButton button" onClick={this.filterOfMovies}>Найти</div>
                 </div>
                 <div className="moviesListContainer">
                     {this.state.arrOfMovieList.map((obj) => {
                         return (
                             <div key={obj.id} className="movieCardContainer">
-                                
-                                    <Link to={`/movies/${obj.id}`}>
-                                        <img  src={`${obj.poster.url}`} />
-                                    </Link>  
-                                    <h2>{obj.name} ({obj.year} г)</h2>
+
+                                <Link to={`/movies/${obj.id}`}>
+                                    <img src={`${obj.poster.url}`} />
+                                </Link>
+                                <h2>{obj.name} ({obj.year} г)</h2>
                             </div>
                         )
                     })}
